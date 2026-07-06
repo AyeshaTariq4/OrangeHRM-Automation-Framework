@@ -11,13 +11,19 @@ class LoginPage:
     def login(self, username, password):
 
         self.wait.until(
-            EC.visibility_of_element_located((By.NAME, "username"))
+            EC.visibility_of_element_located(
+                (By.XPATH, "//input[@name='username']")
+            )
         ).send_keys(username)
 
         self.wait.until(
-            EC.visibility_of_element_located((By.NAME, "password"))
+            EC.visibility_of_element_located(
+                (By.XPATH, "//input[@name='password']")
+            )
         ).send_keys(password)
 
         self.wait.until(
-            EC.element_to_be_clickable((By.XPATH, "//button[@type='submit']"))
+            EC.element_to_be_clickable(
+                (By.XPATH, "//button[@type='submit']")
+            )
         ).click()
