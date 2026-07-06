@@ -26,7 +26,7 @@ driver.maximize_window()
 driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
 
 # Wait for page to load
-time.sleep(3)
+time.sleep(10)
 
 # Login Object
 login = LoginPage(driver)
