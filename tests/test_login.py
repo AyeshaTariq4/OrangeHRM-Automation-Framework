@@ -27,6 +27,8 @@ driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
 
 # Wait for page to load
 time.sleep(10)
+driver.implicitly_wait(10)
+
 print(driver.current_url)
 print(driver.title)
 print(driver.page_source[:500])
